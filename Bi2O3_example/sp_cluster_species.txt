@@ -1,0 +1,11 @@
+QM_POT  2
+O       324.   0.064
+Bi      122.0  0.098
+ATOM_TYPE 2
+SHELL   O       0.04   -2.04  6.3  0.
+SP      Bi      4.343   -1.343    19.74
+MM_POT  2
+SHELL   O       SHELL   O       9547.96         0.2192          -32.32
+SP      Bi      SHELL   O       3043.  0.304    0.
+gnorm_tol 0.00005
+#log_limit

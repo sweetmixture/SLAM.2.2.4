@@ -1,0 +1,11 @@
+Further Explanation Howto?
+$ bash get_slam_dipole.sh -help
+
+Example, by using 'slam.out' - standard slam output log - calculate dipole of the cluster by ...
+$ bash get_slam_dipole.sh slam.out
+
+    make sure the path to python analyser (calc_slam_dipole.py) is correctly specified in 'get_slam_dipole.sh'
+
+Possible outputs
+dip_slam.out   : analysis result
+dip_slam.vesta : standard 'VESTA' file - xyz plot with visualised atomic dipole by arrows
