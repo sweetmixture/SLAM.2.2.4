@@ -1,0 +1,5 @@
+icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -o CH_Integrals.o -c CH_Integrals.c
+icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -o CDH_Integrals.o -c CDH_Integrals.c
+icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -o CDDH_Integrals.o -c CDDH_Integrals.c
+icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -o CDDDH_Integrals.o -c CDDDH_Integrals.c
+icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -o BM_SH_Integrals.o -c BM_SH_Integrals.c

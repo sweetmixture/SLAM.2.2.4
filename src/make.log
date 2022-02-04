@@ -1,9 +1,0 @@
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/CH_Integrals.o sp_cluster_integral_lib/CH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/CDH_Integrals.o sp_cluster_integral_lib/CDH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/CDDH_Integrals.o sp_cluster_integral_lib/CDDH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/BM_SH_Integrals.o sp_cluster_integral_lib/BM_SH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/BM_SDH_Integrals.o sp_cluster_integral_lib/BM_SDH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/CDDDH_Integrals.o sp_cluster_integral_lib/CDDDH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/BM_SDDH_Integrals.o sp_cluster_integral_lib/BM_SDDH_Integrals.c
-gcc -O3 -std=c11    -c -o sp_cluster_integral_lib/BM_SDDDH_Integrals.o sp_cluster_integral_lib/BM_SDDDH_Integrals.c
-mpicc -O3 -std=c11 -o slam.240122.mpi.x main_opti.o sp_cluster_system.o sp_cluster_support.o sp_cluster_integrator.o sp_cluster_integral_lib/CH_Integrals.o sp_cluster_integral_lib/CDH_Integrals.o sp_cluster_integral_lib/CDDH_Integrals.o sp_cluster_integral_lib/BM_SH_Integrals.o sp_cluster_integral_lib/BM_SDH_Integrals.o sp_cluster_integral_lib/CDDDH_Integrals.o sp_cluster_integral_lib/BM_SDDH_Integrals.o sp_cluster_integral_lib/BM_SDDDH_Integrals.o -lgsl -lgslcblas -lm

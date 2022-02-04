@@ -15,11 +15,13 @@
 # IC=icc -O3 -std=c11 -mcmodel=large
 #
 
+# for local osx dev .. intel compiler use
 MCC=mpicc -O3 -std=c11
-IC=icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include  # for local osx dev .. intel compiler use
+IC=icc -O3 -std=c11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 CC=gcc -O3 -std=c11
 
 LD=-lgsl -lgslcblas -lm
+
 # USE PREPARED ANALYTICAL INTEGRALS
 ILP=sp_cluster_integral_lib/
 
@@ -44,7 +46,6 @@ sp_cluster_system.o: sp_cluster_system.c sp_cluster_system.h sp_cluster_type.h s
 sp_cluster_support.o: sp_cluster_support.c sp_cluster_support.h
 	$(CC) -o $@ -c sp_cluster_support.c
 
-
 # Compile Integral Library
 #
 # * CXH:
@@ -58,6 +59,9 @@ sp_cluster_support.o: sp_cluster_support.c sp_cluster_support.h
 # 'sp_cluster_integrator*': integral solver, as function of model parameters
 #       Making pre-calculated look-up-table
 #
+
+sp_cluster_integrator.o: sp_cluster_integrator.c sp_cluster_integrator.h sp_cluster_type.h
+	$(IC) -o $@ -c sp_cluster_integrator.c
 
 CH_Integrals.o: sp_cluster_integral_lib/CH_Integrals.c sp_cluster_integral_lib/CH_Integrals.h           
 	$(IC) -o $@ -c sp_cluster_integral_lib/CH_Integrals.c
@@ -82,9 +86,6 @@ CDDDH_Integrals.o: sp_cluster_Integral_lib/CDDDH_Integrals.c sp_cluster_integral
 
 BM_SDDDH_Integrals.o: sp_cluster_integral_lib/BM_SDDDH_Integrals.c sp_cluster_integral_lib/BM_SDDDH_Integrals.h
 	$(IC) -o $@ -c sp_cluster_integral_lib/BM_SDDDH_Integrals.c
-
-sp_cluster_integrator.o: sp_cluster_integrator.c sp_cluster_integrator.h sp_cluster_type.h
-	$(IC) -o $@ -c sp_cluster_integrator.c
 
 # DEV - YUKAWA SHORT_RANGE POT TEST
 
