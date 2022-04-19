@@ -18,3 +18,4 @@ Makefile is prepared in ```/src``` and for successfuly compilation, it requires 
 * * *
 ### Basic I/O
 To familiarise structure of the input and output files, we will take ``` /PbF2_Example1 ```.  
+(who cannot really wait, there is a quick guide in ```/PbF2_Example1/ExampleOverview1```)
