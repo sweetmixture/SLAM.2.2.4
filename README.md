@@ -1,5 +1,5 @@
-## SLAMe
-Sp Lone pair integrated Atomistic Model ( S L A M ) version 2.4.4:   
+## S L A M
+Sp Lone pair integrated Atomistic Model - version 2.4.4:   
 Semi-empirical force field code for simulating cations including sp-lone pair density.  
 
 For more details, please contact :   
@@ -18,6 +18,3 @@ Makefile is prepared in ```/src``` and for successfuly compilation, it requires 
 * * *
 ### Basic I/O
 To familiarise structure of the input and output files, we will take ``` /PbF2_Example1 ```.  
-
-###### Required input files are
-* ```sp_cluster_parameter_src/*``` where 
