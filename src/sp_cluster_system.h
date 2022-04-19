@@ -65,14 +65,7 @@ void sp_cluster_system_bfgs_support_load_x( sp_cluster_system* sp_sys, gsl_vecto
 void sp_cluster_system_bfgs_support_load_g( sp_cluster_system* sp_sys, gsl_vector* g );
 int sp_cluster_system_call_bfgs_algorithm_mpi( sp_cluster_system* sp_sys, double stepmx /* maximum stepsize */, const int cyclemx, int rank, int numtasks );
 
-
-
-
-
-
-
 void sp_cluster_system_write_xyz( sp_cluster_system* sp_sys, FILE* fp, char* fn );
-
 
 // supportive methods
 double sp_cluster_system_get_gnorm( sp_cluster_system* sp_sys );

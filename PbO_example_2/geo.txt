@@ -1,0 +1,5 @@
+#src_path:/Users/woongkyujee/SLAM/SLAM.2.2.4/PbO_example/struct.xyz
+2 1
+  O  c    5.800725    1.311925    5.692651
+  O  s    5.800725    1.311925    5.692651
+ Pb       5.000000    1.000000    4.000000

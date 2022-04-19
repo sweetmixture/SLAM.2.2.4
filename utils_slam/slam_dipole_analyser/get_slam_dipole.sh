@@ -12,9 +12,9 @@ fi
 #################################################################################
 # ENV VARIABLES
 #################################################################################
-SRC_PATH=""
+SRC_PATH="/Users/woongkyujee/SLAM/SLAM.2.2.4/utils_slam/slam_dipole_analyser"
 PYTHON_SRC_PATH=""
-SRC_PATH="/Users/woongkyujee/Desktop/Thesis_Sub_Chapters/SLAM_SRC/SLAM_TURING_01112021/SLAM.2.2.4/utils_slam/slam_dipole_analyser"
+#SRC_PATH="/Users/woongkyujee/Desktop/Thesis_Sub_Chapters/SLAM_SRC/SLAM_TURING_01112021/SLAM.2.2.4/utils_slam/slam_dipole_analyser"
 PYTHON_SRC_PATH="$SRC_PATH/calc_slam_dipole.py"
 #################################################################################
 

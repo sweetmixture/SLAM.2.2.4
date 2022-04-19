@@ -13,10 +13,10 @@ sp_cluster_parameter_src (directory)   - required : s and px py pz radial basisf
 # Note that this example is for simulating '(PbF2)5' local minimum structure
 
 Possible execution command
-$ mpirun -np 2 ./../slam.240122.mpi.x slam.xyz 1000 slam.cube > slam.out &
+$ mpirun -np 2 ./../slam.240122.mpi.x out.xyz 1000 out.cube > out.txt &
                                       (1)     (2)    (3)         (4) 
 
-(1) - required : output.xyz
+(1) - required : standard atomic configuration as 'out.xyx' 
 (2) - required : maximum optimisation cycle (if not specified - single point will be carried out)
 (3) - optional : generate 'cube' file ... Gaussian Convention used
 (4) - optional : logging output
@@ -24,7 +24,7 @@ $ mpirun -np 2 ./../slam.240122.mpi.x slam.xyz 1000 slam.cube > slam.out &
 
 Possible output files,
 
-slam.xyz
-slam.cube
-slam.out
+out.xyz
+out.cube
+out.txt
 geo.txt.next : possible new configuration can be used for further optimisation, if necessary // trim '.next' and run again

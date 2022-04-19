@@ -25,6 +25,8 @@
 
 // PbF2 SLAM CALCULATIOSN DEFAULT !!!
 #define SP_CLUSTER_INTEGRATOR_INTEGRAL_TOLERANCE 75 	// FOR Pb, Bi - 75 .. for 0.0001
+// PbO ?
+
 
 // Thesis Model Validation Default + Bi2O3 additional SLAM calculations!!!
 // used for thesis model validation .... 10/07/2021 Sat confirmed
@@ -330,12 +332,5 @@ double sp_cluster_integral_get_sp_core_bm_force_z_ss( sp_cluster_system* sp_sys,
 double sp_cluster_integral_get_sp_core_bm_force_z_sz( sp_cluster_system* sp_sys, const double dist /*in Angstrom*/ );
 double sp_cluster_integral_get_sp_core_bm_force_z_xxyy( sp_cluster_system* sp_sys, const double dist /*in Angstrom*/ );
 double sp_cluster_integral_get_sp_core_bm_force_z_zz( sp_cluster_system* sp_sys, const double dist /*in Angstrom*/ );
-
-
-
-
-
-
-
 
 #endif
