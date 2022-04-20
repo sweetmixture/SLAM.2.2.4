@@ -2822,7 +2822,7 @@ double sp_cluster_system_get_sp_energy( sp_cluster_type_sp_ion* sp, const int k 
 //
 // dHj;uv/di -> derive_evec_sp[i][j][..][..]; 
 // 2019/09/25
-void grad_evec_solver_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type, double**** out )
+void test__test_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type, double**** out )
 {
     double e[4];
     double de[3] = {0,0,0};
@@ -2910,7 +2910,7 @@ void grad_evec_solver_support( sp_cluster_system* sp_sys, double*** dh_matrix, c
 }
 
 //2019/09/23 test
-void grad_evec_solver( sp_cluster_system* sp_sys, const int rank, const int numtasks )
+void test__test( sp_cluster_system* sp_sys, const int rank, const int numtasks )
 {   
     const int cycmx = 25;
     const int number_of_sp_ion = sp_sys->number_of_sp_ion;
@@ -3067,8 +3067,8 @@ for(int cycle=0;cycle<cycmx;cycle++)
                 //      input: sp_cluster_system* sp_sys, double*** dh_matrix_tmp, int j, int i, const int type (=0 vs_sp//=1 vs_cal) 
                 //
                 // dHj;uv/di -> derive_evec_sp[i][j][..][..]; 
-                //grad_evec_solver_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
-                grad_evec_solver_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 0 , deriv_evec_sp_tmp );
+                //test__test_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
+                test__test_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 0 , deriv_evec_sp_tmp );
 
                 // memset dh_matrix_tmp
                 for(int u=0;u<4;u++)
@@ -3144,8 +3144,8 @@ for(int cycle=0;cycle<cycmx;cycle++)
 
                 // CALL D_EVEC CALCULATOR; case when i!=j
                 // dHj;uv/di -> derive_evec_sp[i][j][..][..]; 
-                //grad_evec_solver_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
-                grad_evec_solver_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 0, deriv_evec_sp_tmp );
+                //test__test_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
+                test__test_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 0, deriv_evec_sp_tmp );
                 
                 // memset dh_matrix_tmp
                 for(int u=0;u<4;u++)
@@ -3214,8 +3214,8 @@ for(int cycle=0;cycle<cycmx;cycle++)
 
             // CALL D_EVEC CALCULATOR; case when i=j
             // dHj;uv/di -> derive_evec_cla[i][j][..][..]; 
-            //grad_evec_solver_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
-            grad_evec_solver_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 1, deriv_evec_cla_tmp );
+            //test__test_support( sp_cluster_system* sp_sys, double*** dh_matrix, const int i /*diff with*/, const int j/*diff tar*/, const int type )
+            test__test_support( sp_sys, dh_matrix_tmp, i /*diff with*/, j/*diff tar*/, 1, deriv_evec_cla_tmp );
 
             // memset dh_matrix_tmp
             for(int u=0;u<4;u++)
@@ -4013,7 +4013,7 @@ void sp_cluster_system_get_force_mpi( sp_cluster_system* sp_sys, int rank, int n
     
     // EVEC DERIVATIVE CORRECTION TERM !!!!!! 2019/09/26  VER 1.2 
 
-    grad_evec_solver( sp_sys, rank, numtasks );
+    test__test( sp_sys, rank, numtasks );
 
     // EVEC DERIVATIVE CORRECTION TERM - VERY IMPORTANT !!!
 
