@@ -4137,9 +4137,9 @@ void sp_cluster_system_get_force_mpi( sp_cluster_system* sp_sys, int rank, int n
 
 
     // 2nd derivative test variables detach
-    free(fxx_matrix);   free(fxy_matrix);   free(fxz_matrix);
-    free(fyx_matrix);   free(fyy_matrix);   free(fyz_matrix);
-    free(fzx_matrix);   free(fzy_matrix);   free(fzz_matrix);
+    gsl_matrix_free(fxx_matrix);   gsl_matrix_free(fxy_matrix);   gsl_matrix_free(fxz_matrix);
+    gsl_matrix_free(fyx_matrix);   gsl_matrix_free(fyy_matrix);   gsl_matrix_free(fyz_matrix);
+    gsl_matrix_free(fzx_matrix);   gsl_matrix_free(fzy_matrix);   gsl_matrix_free(fzz_matrix);
     
     gsl_matrix_free(global_ddh);    gsl_matrix_free(local_ddh);
 
