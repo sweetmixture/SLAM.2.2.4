@@ -1,6 +1,6 @@
 ## S L A M
 Sp Lone pair integrated Atomistic Model - version 2.4.4:   
-Semi-empirical force field code for simulating cations including sp-lone pair density.  
+Semi-empirical force field code for simulating ions with _sp_-lone pair density.  
 
 For more details, please contact :   
 woong.jee.16@ucl.ac.uk / wldndrb1@gmail.com / scott.woodley@ucl.ac.uk
