@@ -267,7 +267,7 @@ For example, taking the very last bit of the output,
 #############################################################################
 ```
 The file contains some usefule informations,   
-e.g. `Geometric Derivatives ( eV / Angstrom )`, `Lone Pair Molecular Orbital ( Lowest Eigenvalue / EigenVector )`,   
+e.g. see below: `Geometric Derivatives ( eV / Angstrom )`, `Lone Pair Molecular Orbital ( Lowest Eigenvalue / EigenVector )`,   
 which are used for secondary processes:   
  (i) Dipole moment of the system, see `/utils_slam/slam_dipole_analyser`;   
 (ii) Normal mode analysis (requires interfacing with Python/Shell written script,   
