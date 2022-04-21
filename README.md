@@ -270,5 +270,5 @@ The file contains some usefule informations,
 e.g. see below: `Geometric Derivatives ( eV / Angstrom )`, `Lone Pair Molecular Orbital ( Lowest Eigenvalue / EigenVector )`,   
 which are used the following for secondary processes:   
  (i) Dipole moment of the system, see `/utils_slam/slam_dipole_analyser`;   
-(ii) Normal mode analysis (requires interfacing with Python/Shell written script,   
+(ii) Normal mode analysis, which requires interfacing with Python/Shell written script,   
 source: <https://github.com/sweetmixture/slam.vibration_normal_mode.support.git>.  
