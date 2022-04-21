@@ -143,7 +143,8 @@ Say, the command is,
 
 once the run is successfully done, you will get: `out.xyz`, `out.cube`, `out.txt` and `geo.txt.next`,   
 where `geo.txt.next` is auto-generated file in the format of `geo.txt`.   
-If the optimisation is not fully done, you can simply detach `.next` and feed the dump into a reoptimisation.  
+If the optimisation is not fully done, you can simply detach `.next` and feed the dump into re-optimisation.  
+
 * * *
 
 ### 3. Standard Output File
