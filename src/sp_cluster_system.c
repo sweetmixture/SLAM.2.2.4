@@ -3036,15 +3036,15 @@ for(int cycle=0;cycle<cycmx;cycle++)
                                                             -2.*evk[0]*evk[3]*integral_z*gsl_matrix_get(sp_sys->ddh_matrix_zz[j][k],u,v) ); 
                                 //vs sp ion dipole      
                                 
-								// SECTION_FOR_SP_CORE
-								if( sp_sys->if_interaction_qm_spc_bm == SP_SYSTEM_TRUE )
-								{
-									dh_matrix_tmp[u][v][0] += gsl_matrix_get(sp_sys->dh_matrix_x_sp_core[j][k],u,v);
-									dh_matrix_tmp[u][v][1] += gsl_matrix_get(sp_sys->dh_matrix_y_sp_core[j][k],u,v);
-									dh_matrix_tmp[u][v][2] += gsl_matrix_get(sp_sys->dh_matrix_z_sp_core[j][k],u,v);
-								}
+				// SECTION_FOR_SP_CORE
+				if( sp_sys->if_interaction_qm_spc_bm == SP_SYSTEM_TRUE )
+				{
+					dh_matrix_tmp[u][v][0] += gsl_matrix_get(sp_sys->dh_matrix_x_sp_core[j][k],u,v);
+					dh_matrix_tmp[u][v][1] += gsl_matrix_get(sp_sys->dh_matrix_y_sp_core[j][k],u,v);
+					dh_matrix_tmp[u][v][2] += gsl_matrix_get(sp_sys->dh_matrix_z_sp_core[j][k],u,v);
+				}
 
-                                    // contribution by evec derivatives
+				// contribution by evec derivatives
                                 dh_matrix_tmp[u][v][0] += ( -2.*integral_x*gsl_matrix_get(sp_sys->scf_dh_x_matrix_vs_sp_ion_dipole[j][k],u,v)*(sp_sys->deriv_evec_sp[i][k][0][0]*evk[1]+evk[0]*sp_sys->deriv_evec_sp[i][k][1][0])
                                                             -2.*integral_y*gsl_matrix_get(sp_sys->scf_dh_y_matrix_vs_sp_ion_dipole[j][k],u,v)*(sp_sys->deriv_evec_sp[i][k][0][0]*evk[2]+evk[0]*sp_sys->deriv_evec_sp[i][k][2][0])
                                                             -2.*integral_z*gsl_matrix_get(sp_sys->scf_dh_z_matrix_vs_sp_ion_dipole[j][k],u,v)*(sp_sys->deriv_evec_sp[i][k][0][0]*evk[3]+evk[0]*sp_sys->deriv_evec_sp[i][k][3][0]) );
